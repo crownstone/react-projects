@@ -2,7 +2,7 @@
 
 let styles = {
   input: {
-    width: 450,
+    width: 'min(85vw, 450px)',
     height: 35,
     padding: 5,
     borderRadius: 5,
@@ -10,7 +10,7 @@ let styles = {
     borderWidth: 1
   },
   warningButton: {
-    width: 450,
+    width: 'min(85vw, 450px)',
     height: 35,
     padding: 5,
     borderRadius: 5,
@@ -179,8 +179,9 @@ class LoginForm extends React.Component {
         <input
           style={styles.input}
           placeholder={"email"}
+          inputmode={'email'}
           value={this.state.email}
-          onChange={(e) => { this.setState({email:e.target.value}); }}
+          onChange={(e) => { this.setState({email:e.target.value.toLowerCase()}); }}
         />
         <br />
         <input
