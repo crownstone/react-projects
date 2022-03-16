@@ -20,7 +20,7 @@ let styles = {
   }
 }
 
-let pathPrefix = "http://localhost:3050";
+let pathPrefix = "https://next.crownstone.rocks";
 
 class UserDataContainer extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class UserDataContainer extends React.Component {
   render() {
     return (
       <div style={{display:'flex', flexDirection:'column', alignItems: 'center', justifyContent:'center'}}>
-        <h1>Crownstone user data management</h1>
+        <h1>Data management</h1>
         <br />
         {
           this.state.accessToken === null ?

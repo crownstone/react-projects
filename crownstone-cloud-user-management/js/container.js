@@ -28,7 +28,7 @@ var styles = {
   }
 };
 
-var pathPrefix = "http://localhost:3050";
+var pathPrefix = "https://next.crownstone.rocks";
 
 var UserDataContainer = function (_React$Component) {
   _inherits(UserDataContainer, _React$Component);
@@ -56,7 +56,7 @@ var UserDataContainer = function (_React$Component) {
         React.createElement(
           'h1',
           null,
-          'Crownstone user data management'
+          'Data management'
         ),
         React.createElement('br', null),
         this.state.accessToken === null ? React.createElement(LoginForm, { callback: function callback(tokenData) {
