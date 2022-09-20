@@ -107,7 +107,7 @@ class BluenetCallListing extends React.Component {
 
     for (let id in data.pending)   {  pending.push({id, ...data.pending[id]}); }
     for (let id in data.finished)  {  finished.push({id, finished: true, type: 'promise', ...data.finished[id]}); }
-    for (let item of data.bluenet) {  finished.push({finished: true, type: 'direct', ...item}) };
+    for (let item of data.bluenet) {  finished.push({id: item.id, finished: true, type: 'direct', ...item}) };
 
     pending.sort( (a,b) => { return b.tStart - a.tStart; });
     finished.sort((a,b) => { return b.tStart - a.tStart; });
@@ -124,7 +124,7 @@ class BluenetCallListing extends React.Component {
     for (let item of list) {
       result.push(
         <PromiseCallListing
-          key={`${item.function}${item.tStart}`}
+          key={`${item.id}__${item.function}${item.tStart}`}
           {...item}
           update={() => { this.update(); }}
           even={even}
